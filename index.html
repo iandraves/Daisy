@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Average RGB</title>
+    <script>
+        var loc = window.location.href + '';
+        if (loc.indexOf('http://') == 0) {
+            window.location.href = loc.replace('http://', 'https://');
+        }
+    </script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.10.0/css/themes/default.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.10.0/css/alertify.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.10.0/alertify.min.js"></script>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="keywords" content="average rgb, rgb, mean rgb, exact color, color extractor, average color, mean color">
+</head>
+
+<body>
+    <center>
+        <h1>Average RGB</h1><br>
+        <label class="btn btn-default btn-file btn-lg">
+            Choose Image From Device<input type="file" style="display: none;" id="brwsimg" multiple>
+        </label><br><br>
+        <b style="font-size: 22px;">or</b><br><br>
+        <div id='drop'>
+            <div id="plus">+</div>
+            <div id="spacing">Drop Image Here</div><img id="image" class="hidden" /></div>
+        <br />
+        <div class="hidden" id="hiddenstuff">
+            <p id="rgbval"></p><br>
+            <canvas id="color"></canvas><br>
+        </div><br>
+        <p><a id="otherprograms" href="https://iandraves.github.io/subpages.html">Other Projects By Ian Draves</a></p>
+        <i id="copyRight">
+                    <footer id="footer" class="footer">
+                        <center>
+                            <script>
+                                document.write('&copy;');
+                                document.write(' Ian Draves ');
+                                document.write(new Date().getFullYear());
+                            </script>
+                    </center>
+                </footer>
+            </i>
+    </center>
+    <script src='script.js'></script>
+</body>
+
+</html>
