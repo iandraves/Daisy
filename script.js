@@ -1,5 +1,3 @@
-//Ian Draves Copyright 2017 (C)
-
 //Defining global variables
 var rgbStr;
 var drop = false;
@@ -35,9 +33,9 @@ function processImage(image) {
       return;
     }
   } else
-      img.src = image;
+    img.src = image;
 
-  img.onload = function() {
+  img.onload = function () {
     var rgb = getAverageColor(img);
     rgbStr = rgb.r + ', ' + rgb.g + ', ' + rgb.b;
     color.style = "background-color: rgb(" + rgbStr + ");";
@@ -87,13 +85,13 @@ function getAverageColor(img) {
 }
 
 //When user hovers over page with image
-document.ondragover = function(event) {
+document.ondragover = function (event) {
   event.preventDefault();
   event.dataTransfer.dropEffect = 'copy';
 };
 
 //When user drops image on page
-document.ondrop = function(event) {
+document.ondrop = function (event) {
   event.preventDefault();
   var images = event.dataTransfer.files;
   for (var i = 0; i < images.length; i++) {
@@ -102,7 +100,7 @@ document.ondrop = function(event) {
   }
 };
 
-brwsimg.onchange = function() {
+brwsimg.onchange = function () {
   files = this.files;
   var binaryData = [];
   binaryData.push(files[0]);
